@@ -11,9 +11,17 @@ body {
 }
 
 .box {
+  background-image: url(../img/leaves.webp);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: pink;
   width: 500px;
   padding: 2rem;
   border: 2px solid red;
   margin: 2rem;
+}
+
+.box img {
+  width: 50%;
 }
