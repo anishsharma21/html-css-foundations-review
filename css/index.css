@@ -1,0 +1,12 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #999;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px hsla(0, 0%, 0%, 0.1);
+}

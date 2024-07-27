@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  padding: 5vw;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #090;
+}
+
+.quiz {
+  display: grid;
+  gap: 1rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 0 10px;
+}
+
+.options div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 7vh;
+  border: 2px solid #060;
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.options div:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.back-forward {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.back-forward div {
+  text-align: center;
+  padding: 1rem;
+  min-width: 3rem;
+  font-size: 0.8rem;
+  border: 2px, solid black;
+}
+
+.back-forward div:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
