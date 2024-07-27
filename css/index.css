@@ -1,12 +1,45 @@
 nav {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 nav a {
+  color: black;
   text-decoration: none;
   background-color: #999;
   padding: 0.5rem;
   border-radius: 10px;
-  box-shadow: 2px 5px 5px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid black;
+}
+
+nav a:hover {
+  background-color: #bbb;
+}
+
+.click-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.click-me {
+  padding: 1rem;
+  background-color: #999;
+  width: 20vw;
+  text-align: center;
+  border: 2px dashed yellow;
+  border-radius: 10px;
+}
+
+.click-me:hover {
+  border: 2px solid yellow;
+  cursor: pointer;
 }
