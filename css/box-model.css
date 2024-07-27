@@ -45,3 +45,16 @@ p a:link {
 p a:hover {
   color: #ccc;
 }
+
+ol {
+  text-align: center;
+  list-style-type: upper-roman;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+ul {
+  text-align: center;
+  list-style-position: inside;
+  padding-left: 0;
+}
