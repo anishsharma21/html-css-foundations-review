@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.parent-box {
+  background-color: #f00;
+}
+
+.box {
+  background-color: pink;
+  width: 500px;
+  padding: 2rem;
+  border: 2px solid red;
+  margin: 2rem;
+}
