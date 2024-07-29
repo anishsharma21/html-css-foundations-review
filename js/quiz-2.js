@@ -35,15 +35,6 @@ const questions = [
       Madrid: false,
     },
   },
-  {
-    question: "What is the capital of Italy?",
-    choices: {
-      Paris: false,
-      London: false,
-      Berlin: false,
-      Madrid: false,
-    },
-  },
 ];
 
 const questionElement = document.getElementById("question");
@@ -53,7 +44,7 @@ let questionIndex = 0;
 let total = 0;
 
 function startQuiz(index = 0, curTotal = 0) {
-  console.log(index, curTotal);
+  console.log(total);
   questionIndex = index;
   total = curTotal;
   let questionObj = questions[questionIndex];
@@ -62,9 +53,6 @@ function startQuiz(index = 0, curTotal = 0) {
     const curButton = optionsDiv.children.item(i);
     curButton.innerHTML = Object.entries(questionObj.choices)[i][0];
     curButton.classList.add(`${Object.entries(questionObj.choices)[i][1]}`);
-    curButton.addEventListener("click", (e) => {
-      checkAnswer(e.target);
-    });
   }
 }
 
@@ -77,23 +65,32 @@ function checkAnswer(target) {
     target.style["background-color"] = "green";
     target.style["color"] = "white";
     total++;
-    console.log("TRUE");
   } else {
     target.style["background-color"] = "red";
     target.style["color"] = "white";
-    console.log("FALSE");
   }
 }
 
 function nextQuestion() {
   questionIndex++;
-  console.log(total);
-  console.log(questionIndex);
+  if (questionIndex >= Object.entries(questions).length) {
+    console.log(
+      "Quiz finished!\nTotal: " + total + "/" + Object.entries(questions).length
+    );
+    return;
+  }
+  console.log("On to question: " + questionIndex);
   startQuiz(questionIndex, total);
 }
 
 const nextButton = document.getElementById("next-btn");
 const prevButton = document.getElementById("prev-btn");
+const buttons = document.querySelectorAll(".choice");
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    checkAnswer(e.target);
+  });
+});
 
 nextButton.addEventListener("click", () => {
   resetStyles();
@@ -109,4 +106,6 @@ function resetStyles() {
   });
 }
 
-startQuiz();
+if (questionIndex <= Object.entries(questions).length) {
+  startQuiz();
+}
