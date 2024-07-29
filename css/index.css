@@ -3,11 +3,12 @@ body {
 }
 
 nav {
+  margin: 0 auto;
+  width: 80%;
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
 nav a {
