@@ -9,6 +9,7 @@ nav {
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 nav a {
