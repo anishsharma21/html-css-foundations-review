@@ -44,7 +44,6 @@ let questionIndex = 0;
 let total = 0;
 
 function startQuiz(index = 0, curTotal = 0) {
-  console.log(total);
   questionIndex = index;
   total = curTotal;
   let questionObj = questions[questionIndex];
@@ -57,6 +56,12 @@ function startQuiz(index = 0, curTotal = 0) {
 }
 
 function checkAnswer(target) {
+  if (questionIndex >= Object.entries(questions).length) {
+    console.log(
+      "Quiz finished!\nTotal: " + total + "/" + Object.entries(questions).length
+    );
+    return;
+  }
   const buttons = document.querySelectorAll(".choice");
   buttons.forEach((button) => {
     button.disabled = true;
@@ -79,7 +84,6 @@ function nextQuestion() {
     );
     return;
   }
-  console.log("On to question: " + questionIndex);
   startQuiz(questionIndex, total);
 }
 
